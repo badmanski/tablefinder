@@ -1,0 +1,28 @@
+development: &generic
+  adapter: postgresql
+  encoding: utf8
+  host: localhost
+  port: 5432
+  pool: 10
+  database: tablefinder_development
+  username: tablefinder
+  password: tablef1nder
+  schema_search_path: tablefinder
+
+test: &test
+  <<: *generic
+  database: tablefinder_test
+  schema_search_path: public
+  min_messages: warning
+
+staging:
+  <<: *generic
+  database: tablefinder_staging
+  username: tablefinder_staging
+  password: t4blef1nd3rStag1ng1324m
+
+production:
+  <<: *generic
+  database: tablefinder_production
+  username: tablefinder_production
+  password: 15zHd8575PYZXOAQz2Y8h4t8O3834Mr7LE5VTwwm
