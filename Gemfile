@@ -17,6 +17,10 @@ gem "pry", "~> 0.9.12.1"
 gem "awesome_print"
 gem 'airbrake', '~> 3.0.9'
 gem 'timecop'
+gem 'anjlab-bootstrap-rails', 
+  :require => 'bootstrap-rails',
+  :github => 'anjlab/bootstrap-rails',
+  :branch => '3.0.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
