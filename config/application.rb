@@ -25,6 +25,11 @@ module Tablefinder
       g.helper false
       g.stylesheets false
       g.javascripts false
+      g.test_framework :rspec,
+        controller_specs: false,
+        view_specs: false,
+        routing_specs: false,
+        helper_specs: false
     end
   end
 end
