@@ -23,6 +23,7 @@ module Tablefinder
     config.generators do |g|
       g.fixture_replacement :machinist
       g.helper false
+      g.jbuilder false
       g.stylesheets false
       g.javascripts false
       g.test_framework :rspec,
