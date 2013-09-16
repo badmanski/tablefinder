@@ -1,25 +1,23 @@
-= form_for @user do |f|
-  - if @user.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
-      %ul
-        - @user.errors.full_messages.each do |msg|
-          %li= msg
+= form_for @user, html: { class: 'form width-400' } do |f|
+  %fieldset
+    %legend= @user.persisted? ? t(:edit_user) : t(:create_user)
+    .form-group
+      = f.label :name, t(:name)
+      = f.text_field :name, placeholder: t(:name), class: 'form-control'
+    .form-group
+      = f.label :email, t(:email)
+      = f.text_field :email, placeholder: t(:email), class: 'form-control'
+    .form-group
+      = f.label :phone, t(:phone)
+      = f.text_field :phone, placeholder: t(:phone), class: 'form-control'
+    .form-group
+      = f.label :password, t(:password)
+      = f.password_field :password, placeholder: t(:password), class: 'form-control'
+    .form-group
+      = f.label :password_confirmation, t(:password_confirmation)
+      = f.password_field :password_confirmation, placeholder: t(:password_confirmation), class: 'form-control'
+    = f.submit @user.persisted? ? t(:edit_user) : t(:create_user) , class: 'btn btn-success'
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :phone
-    = f.text_field :phone
-  .field
-    = f.label :place_id
-    = f.number_field :place_id
-  .field
-    = f.label :password_digest
-    = f.text_field :password_digest
-  .actions
-    = f.submit 'Save'
+:javascript
+  $('.nav li').removeClass('active');
+  $('#nav-users').addClass('active');

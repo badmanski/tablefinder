@@ -1,13 +1,8 @@
-%h1 Listing users
-
-%table
+%table.table.table-hover
   %tr
-    %th Name
-    %th Email
-    %th Phone
-    %th Place
-    %th Password digest
-    %th
+    %th= t(:name)
+    %th= t(:email)
+    %th= t(:phone)
     %th
     %th
 
@@ -16,12 +11,11 @@
       %td= user.name
       %td= user.email
       %td= user.phone
-      %td= user.place_id
-      %td= user.password_digest
-      %td= link_to 'Show', user
-      %td= link_to 'Edit', edit_user_path(user)
-      %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to t(:edit), edit_user_path(user)
+      %td= link_to t(:delete), user, method: :delete, confirm: t(:sure)
 
-%br
+= link_to t(:new_user), new_user_path, class: 'btn btn-success'
 
-= link_to 'New User', new_user_path
+:javascript
+  $('.nav li').removeClass('active');
+  $('#nav-users').addClass('active');

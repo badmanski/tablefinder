@@ -1,17 +1,16 @@
 require 'machinist/active_record'
 
-# Add your blueprints here.
-#
-# e.g.
-#   Post.blueprint do
-#     title { "Post #{sn}" }
-#     body  { "Lorem ipsum..." }
-#   end
-
 Place.blueprint do
-  # Attributes here
+  name {"Place #{sn}"}
+  email {"place#{sn}@place.com"}
+  phone {"564656#{sn}"}
+  address {"The street, #{sn}, Tallinn, Estonia"}
+  url {"place#{sn}.com"}
 end
 
 User.blueprint do
-  # Attributes here
+  name {"User #{sn}"}
+  email {"user#{sn}@place.com"}
+  place {Place.make!}
+  password {"password"}
 end
