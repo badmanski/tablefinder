@@ -1,21 +1,8 @@
-%p#notice= notice
+%ul.list-group.width-400
+  %li.list-group-item= @user.name
+  %li.list-group-item= @user.email
+  %li.list-group-item= @user.phone
+  %li.list-group-item= link_to @user.place, place_path(@user.place)
 
-%p
-  %b Name:
-  = @user.name
-%p
-  %b Email:
-  = @user.email
-%p
-  %b Phone:
-  = @user.phone
-%p
-  %b Place:
-  = @user.place_id
-%p
-  %b Password digest:
-  = @user.password_digest
-
-= link_to 'Edit', edit_user_path(@user)
-\|
-= link_to 'Back', users_path
+= link_to t(:user, count: 2), users_path, class: 'btn btn-primary'
+= link_to t(:edit_user), edit_user_path(@user), class: 'btn btn-primary'

@@ -1,0 +1,12 @@
+export PATH ; PATH="/Users/badmanski/.rvm/gems/ruby-2.0.0-p195@rails-4/bin:/Users/badmanski/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/badmanski/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/badmanski/.rvm/bin:$PATH"
+export rvm_env_string ; rvm_env_string='ruby-2.0.0-p195@rails-4'
+export rvm_path ; rvm_path='/Users/badmanski/.rvm'
+export rvm_ruby_string ; rvm_ruby_string='ruby-2.0.0-p195'
+export rvm_gemset_name ; rvm_gemset_name='rails-4'
+export RUBY_VERSION ; RUBY_VERSION='ruby-2.0.0-p195'
+export GEM_HOME ; GEM_HOME='/Users/badmanski/.rvm/gems/ruby-2.0.0-p195@rails-4'
+export GEM_PATH ; GEM_PATH='/Users/badmanski/.rvm/gems/ruby-2.0.0-p195@rails-4:/Users/badmanski/.rvm/gems/ruby-2.0.0-p195@global'
+export MY_RUBY_HOME ; MY_RUBY_HOME='/Users/badmanski/.rvm/rubies/ruby-2.0.0-p195'
+export IRBRC ; IRBRC='/Users/badmanski/.rvm/rubies/ruby-2.0.0-p195/.irbrc'
+unset MAGLEV_HOME
+unset RBXOPT

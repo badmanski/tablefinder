@@ -14,6 +14,7 @@ gem 'haml', '~> 4.0.2'
 gem 'haml-rails', '~> 0.4'
 gem 'inherited_resources', '~> 1.4.0'
 gem "pry", "~> 0.9.12.1"
+gem 'pry-remote'
 gem "awesome_print"
 gem 'airbrake', '~> 3.0.9'
 gem 'timecop'
@@ -37,6 +38,7 @@ end
 
 group :development do
   gem "better_errors"
+  gem "binding_of_caller"
   gem "quiet_assets"
   gem "guard-rubocop"
   gem "guard-rspec"

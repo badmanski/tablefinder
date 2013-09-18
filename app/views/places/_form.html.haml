@@ -1,25 +1,29 @@
-= form_for @place do |f|
-  - if @place.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@place.errors.count, "error")} prohibited this place from being saved:"
-      %ul
-        - @place.errors.full_messages.each do |msg|
-          %li= msg
+- @place.errors.full_messages.each do |msg|
+  .alert.alert-danger.fade.in
+    = msg
+    .close{ data: {dismiss: "alert" }} &times;
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :phone
-    = f.text_field :phone
-  .field
-    = f.label :address
-    = f.text_field :address
-  .field
-    = f.label :url
-    = f.text_field :url
-  .actions
-    = f.submit 'Save'
+= form_for @place, html: { class: 'form width-400' } do |f|
+  %fieldset
+    %legend= @place.persisted? ? t(:edit_place) : t(:create_place)
+    .form-group
+      = f.label :name, t(:name)
+      = f.text_field :name, placeholder: t(:name), class: 'form-control'
+    .form-group
+      = f.label :email, t(:email)
+      = f.text_field :email, placeholder: t(:email), class: 'form-control'
+    .form-group
+      = f.label :phone, t(:phone)
+      = f.text_field :phone, placeholder: t(:phone), class: 'form-control'
+    .form-group
+      = f.label :url, t(:url)
+      = f.text_field :url, placeholder: t(:url), class: 'form-control'
+    .form-group
+      = f.label :address, t(:address)
+      = f.text_field :address, placeholder: t(:address), class: 'form-control'
+
+    = f.submit class: 'btn btn-success'
+
+:javascript
+  $('.nav li').removeClass('active');
+  $('#nav-places').addClass('active');

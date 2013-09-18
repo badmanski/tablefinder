@@ -3,14 +3,14 @@
     = flash[:notice]
     .close{ data: {dismiss: "alert" }} &times;
 - if flash[:error]
-  .alert.alert-dang.fade.in
+  .alert.alert-danger.fade.in
     = flash[:error]
     .close{ data: {dismiss: "alert" }} &times;
 - if flash[:success]
-  .alert.alert-succ.fade.in
+  .alert.alert-success.fade.in
     = flash[:success]
     .close{ data: {dismiss: "alert" }} &times;
 - if flash[:warning]
-  .alert.alert-warn.fade.in
+  .alert.alert-warning.fade.in
     = flash[:warning]
     .close{ data: {dismiss: "alert" }} &times;

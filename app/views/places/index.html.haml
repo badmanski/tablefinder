@@ -1,27 +1,23 @@
-%h1 Listing places
-
-%table
+%table.table.table-hover
   %tr
-    %th Name
-    %th Email
-    %th Phone
-    %th Address
-    %th Url
-    %th
+    %th= t(:name)
+    %th= t(:email)
+    %th= t(:phone)
+    %th= t(:address)
     %th
     %th
 
   - @places.each do |place|
     %tr
-      %td= place.name
+      %td= link_to place.name, place_path(place)
       %td= place.email
       %td= place.phone
       %td= place.address
-      %td= place.url
-      %td= link_to 'Show', place
-      %td= link_to 'Edit', edit_place_path(place)
-      %td= link_to 'Destroy', place, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to t(:edit), edit_place_path(place), class: 'btn btn-default btn-sm'
+      %td= link_to t(:delete), place, method: :delete, confirm: t(:sure), class: 'btn btn-danger btn-sm'
 
-%br
+= link_to t(:new_place), new_place_path, class: 'btn btn-success'
 
-= link_to 'New Place', new_place_path
+:javascript
+  $('.nav li').removeClass('active');
+  $('#nav-places').addClass('active');
