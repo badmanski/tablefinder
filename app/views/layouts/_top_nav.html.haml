@@ -11,3 +11,6 @@
     %ul.nav.navbar-nav
       %li#nav-places= link_to t(:places), places_path
       %li#nav-users= link_to t(:users), users_path
+    - if session[:user_id]
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to t(:logout), logout_path, method: :delete

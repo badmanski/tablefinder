@@ -23,3 +23,8 @@ en:
   edit: Edit
   delete: Delete
   sure: Are you sure?
+  login_failed: Login failed
+  login_successful: Login successful
+  logout_successful: Logout successful
+  log_in: Log in
+  please_log_in: Please Log in

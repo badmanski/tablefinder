@@ -10,7 +10,7 @@
   .alert.alert-success.fade.in
     = flash[:success]
     .close{ data: {dismiss: "alert" }} &times;
-- if flash[:warning]
+- if flash[:alert]
   .alert.alert-warning.fade.in
-    = flash[:warning]
+    = flash[:alert]
     .close{ data: {dismiss: "alert" }} &times;
