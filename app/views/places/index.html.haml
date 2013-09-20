@@ -13,8 +13,9 @@
       %td= place.email
       %td= place.phone
       %td= place.address
-      %td= link_to t(:edit), edit_place_path(place), class: 'btn btn-default btn-sm'
-      %td= link_to t(:delete), place, method: :delete, confirm: t(:sure), class: 'btn btn-danger btn-sm'
+      - if session[:user_id]
+        %td= link_to t(:edit), edit_place_path(place), class: 'btn btn-default btn-sm'
+        %td= link_to t(:delete), place, method: :delete, confirm: t(:sure), class: 'btn btn-danger btn-sm'
 
 = link_to t(:new_place), new_place_path, class: 'btn btn-success'
 
