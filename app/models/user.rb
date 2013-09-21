@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include SentientUser
   belongs_to :place
 
   validates :name, :email, :place_id, :password, presence: true

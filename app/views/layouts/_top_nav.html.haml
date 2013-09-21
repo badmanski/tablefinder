@@ -10,8 +10,8 @@
   .collapse.navbar-collapse
     %ul.nav.navbar-nav
       %li#nav-places= link_to t(:places), places_path
-      - if session[:user_id]
+      - if current_user
         %li#nav-users= link_to t(:users), users_path
-    - if session[:user_id]
+    - if current_user
       %ul.nav.navbar-nav.navbar-right
         %li= link_to t(:logout), logout_path, method: :delete

@@ -9,15 +9,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'capistrano', group: :development
 gem 'haml', '~> 4.0.2'
 gem 'haml-rails', '~> 0.4'
 gem 'inherited_resources', '~> 1.4.0'
-gem "pry", "~> 0.9.12.1"
-gem 'pry-remote'
-gem "awesome_print"
 gem 'airbrake', '~> 3.0.9'
-gem 'timecop'
+gem 'sentient_user'
 gem 'anjlab-bootstrap-rails', 
   :require => 'bootstrap-rails',
   :github => 'anjlab/bootstrap-rails',
@@ -33,6 +29,10 @@ group :test, :development do
   gem "webrat", "~> 0.7.3"
   gem "capybara", "~> 2.1.0"
   gem "machinist", "~> 2.0.0"
+  gem "pry", "~> 0.9.12.1"
+  gem 'pry-remote'
+  gem "awesome_print"
+  gem 'timecop'
   gem "simplecov"
 end
 
@@ -42,4 +42,5 @@ group :development do
   gem "quiet_assets"
   gem "guard-rubocop"
   gem "guard-rspec"
+  gem 'capistrano'
 end

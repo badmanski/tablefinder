@@ -1,8 +1,13 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
+  include SentientController
   protect_from_forgery with: :exception
   before_filter :authorize
+
+  def current_user
+    @current_user ||= session[:user_id] && User.find_by_id(session[:user_id])
+  end
+
+  helper_method :current_user
 
   protected
     def authorize

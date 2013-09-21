@@ -13,7 +13,7 @@
       %td= place.email
       %td= place.phone
       %td= place.address
-      - if session[:user_id]
+      - if current_user
         %td= link_to t(:edit), edit_place_path(place), class: 'btn btn-default btn-sm'
         %td= link_to t(:delete), place, method: :delete, confirm: t(:sure), class: 'btn btn-danger btn-sm'
 
