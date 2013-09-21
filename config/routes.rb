@@ -10,6 +10,9 @@ Tablefinder::Application.routes.draw do
 
   resources :places
 
-  get "dashboard/index"
-  root to: "dashboard#index"
+  get "dashboard", to: 'dashboard#index'
+  post "dashboard/create_post"
+  get "main/index"
+
+  root to: "main#index"
 end

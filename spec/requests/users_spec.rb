@@ -11,7 +11,6 @@ describe 'Users' do
 
     it 'can visit dashboard, places index and show' do
       visit root_path
-      expect(page).to have_content('Welcome, guest!')
 
       visit places_path
       expect(page).to have_content(@place.name)

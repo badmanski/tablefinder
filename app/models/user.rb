@@ -8,9 +8,12 @@ class User < ActiveRecord::Base
   ROLES = [ROLE_VISITOR, ROLE_MEMBER, ROLE_OWNER, ROLE_ADMIN]
 
   belongs_to :place
+  has_many :posts
 
   validates :name, :email, :password, presence: true
   validates :email, uniqueness: true
+
+  delegate :name, to: :place, prefix: true
 
   has_secure_password
 

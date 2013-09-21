@@ -1,0 +1,9 @@
+.form-group
+  = label_tag :title, t(:title)
+  = text_field_tag :title, nil, placeholder: t(:title), class: 'form-control post-field'
+.form-group
+  = label_tag :content, t(:content)
+  = text_field_tag :content, nil, placeholder: t(:content), class: 'form-control post-field'
+
+= hidden_field_tag :user_id, current_user.id, class: 'post-field'
+= button_tag t(:create_post), class: 'btn btn-success', id: 'create-post'

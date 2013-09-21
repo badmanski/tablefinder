@@ -1,1 +1,10 @@
-%h1 'Welcome, guest!'
+#alert.hidden
+  .alert.alert-success.fade.in
+    .close{ data: {dismiss: "alert" }} &times;
+    #msg
+%h1
+  Welcome,
+  = current_user.name
+#post-form.hidden
+  = render 'post_form'
+= button_tag t(:create_post), class: 'btn btn-success', id: 'new-post'

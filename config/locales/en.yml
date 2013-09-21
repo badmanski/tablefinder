@@ -11,6 +11,7 @@ en:
   phone: Phone number
   password: Password
   password_confirmation: Password Confirmation
+  role: Role
 
   place:
     one: Place
@@ -19,6 +20,16 @@ en:
   create_place: Create Place
   address: Address
   url: URL
+
+  post:
+    one: Post
+    other: Posts
+  title: Title
+  content: Content
+  new_post: New Post
+  create_post: Create Post
+  post_created: Post have been created
+  post_create_failed: Unable to create post
 
   edit: Edit
   delete: Delete

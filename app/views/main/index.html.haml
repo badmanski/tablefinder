@@ -1,0 +1,6 @@
+- if @posts.any?
+  - @posts.each do |post|
+    .panel.panel-default
+      .panel-heading= post.title
+      .panel-body= post.content  
+      .panel-footer= post.user_place
