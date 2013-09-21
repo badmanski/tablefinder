@@ -2,7 +2,9 @@
   %li.list-group-item= @user.name
   %li.list-group-item= @user.email
   %li.list-group-item= @user.phone
-  %li.list-group-item= link_to @user.place, place_path(@user.place)
+  %li.list-group-item= @user.role.capitalize
+  - if @user.place
+    %li.list-group-item= link_to @user.place, place_path(@user.place)
 
 = link_to t(:user, count: 2), users_path, class: 'btn btn-primary'
 = link_to t(:edit_user), edit_user_path(@user), class: 'btn btn-primary'

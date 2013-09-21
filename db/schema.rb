@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20130914143240) do
     t.string   "email"
     t.string   "phone"
     t.integer  "place_id"
+    t.string   "role",            default: "visitor"
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"

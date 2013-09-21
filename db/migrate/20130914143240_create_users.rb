@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :phone
       t.integer :place_id
+      t.string :role, default: 'visitor'
       t.string :password_digest
 
       t.timestamps
