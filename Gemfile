@@ -26,7 +26,6 @@ end
 
 group :test, :development do
   gem "rspec-rails", "~> 2.13.1"
-  gem "webrat", "~> 0.7.3"
   gem "capybara", "~> 2.1.0"
   gem "machinist", "~> 2.0.0"
   gem "pry", "~> 0.9.12.1"

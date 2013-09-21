@@ -11,6 +11,6 @@ end
 User.blueprint do
   name {"User #{sn}"}
   email {"user#{sn}@place.com"}
-  place {Place.make!}
   password {"password"}
+  password_confirmation {"password"}
 end
