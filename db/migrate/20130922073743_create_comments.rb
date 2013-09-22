@@ -4,6 +4,7 @@ class CreateComments < ActiveRecord::Migration
       t.string :author, null: false
       t.text :content, null: false
       t.integer :post_id, null: false
+      t.boolean :passed, default: false
 
       t.timestamps
     end
