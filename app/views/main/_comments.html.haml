@@ -1,0 +1,5 @@
+%ul.list-group
+  - post.comments.reverse.each do |comment|
+    %li.list-group-item
+      .bold= [comment.author.capitalize, l(comment.created_at)].join(' @ ') << ":"
+      = comment.content

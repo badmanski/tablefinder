@@ -9,7 +9,7 @@ $(function() {
       title: $('#title').val(),
       content: $('#content').val(),
       user_id: $('#user_id').val()
-    }, function(data){
+    }, function(data) {
       $('#msg').html(data.msg);
       $('#alert').fadeIn().removeClass('hidden');
       $('#post-form').addClass('hidden');

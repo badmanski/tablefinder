@@ -1,0 +1,7 @@
+%form.form-inline.bottom-20
+  .form-group
+    = text_field_tag :author, nil, placeholder: t(:author), class: 'form-control comment-field'
+  .form-group
+    = text_field_tag :content, nil, placeholder: t(:content), class: 'form-control comment-field'
+
+  = button_tag t(:create_comment), class: 'btn btn-default submit-comment', 'data-id' => post.id

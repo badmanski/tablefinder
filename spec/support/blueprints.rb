@@ -16,5 +16,12 @@ User.blueprint do
 end
 
 Post.blueprint do
-  # Attributes here
+  title {"Title #{sn}"}
+  content {"Content #{sn}"}
+end
+
+Comment.blueprint do
+  author {"Author #{sn}"}
+  content {"Content #{sn}"}
+  post { Post.make! }
 end

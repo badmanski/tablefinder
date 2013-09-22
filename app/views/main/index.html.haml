@@ -1,6 +1,16 @@
-- if @posts.any?
-  - @posts.each do |post|
-    .panel.panel-default
-      .panel-heading= post.title
-      .panel-body= post.content  
-      .panel-footer= post.user_place
+#alert.hidden
+  .alert.alert-success.fade.in
+    .close{ data: {dismiss: "alert" }} &times;
+    #msg
+- @posts.each do |post|
+  .panel.panel-default
+    .panel-heading= post.title
+    .panel-body= post.content  
+    .panel-footer
+      = post.user_place
+      = button_tag t(:add_comment), class: 'btn btn-default btn-xs add-comment', 'data-id' => post.id
+      = button_tag t(:comment, count: 2), class: 'btn btn-default btn-xs show-comments', 'data-id' => post.id
+  .comment-form{style: 'display: none', 'data-id' => post.id}
+    = render 'comment_form', post: post
+  .comments{style: 'display: none', 'data-id' => post.id}
+    = render 'comments', post: post

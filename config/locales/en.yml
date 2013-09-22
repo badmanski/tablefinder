@@ -31,6 +31,15 @@ en:
   post_created: Post have been created
   post_create_failed: Unable to create post
 
+  comment:
+    one: Comment
+    other: Comments
+  author: Author
+  add_comment: Add Comment
+  show_comments: Show Comments
+  comment_created: Comment have beed added
+  comment_create_failed: Unable to create comment
+
   edit: Edit
   delete: Delete
   sure: Are you sure?
@@ -39,3 +48,9 @@ en:
   logout_successful: Logout successful
   log_in: Log in
   please_log_in: Please Log in
+
+  time:
+    formats:
+      default: "%b %d %H:%M"
+      time_only: "%H:%M"
+      date_only: "%b %d"

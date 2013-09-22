@@ -12,7 +12,9 @@ Tablefinder::Application.routes.draw do
 
   get "dashboard", to: 'dashboard#index'
   post "dashboard/create_post"
+  
   get "main/index"
+  post "main/create_comment"
 
   root to: "main#index"
 end

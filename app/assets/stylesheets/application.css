@@ -20,3 +20,15 @@
 .width-400 {
   max-width: 400px;
 }
+
+.width-600 {
+  max-width: 600px;
+}
+
+.bottom-20 {
+  margin-bottom: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
