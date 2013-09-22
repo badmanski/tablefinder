@@ -33,6 +33,7 @@ group :test, :development do
   gem "awesome_print"
   gem 'timecop'
   gem "simplecov"
+  gem 'i18n_tools'
 end
 
 group :development do
