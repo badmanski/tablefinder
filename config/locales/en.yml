@@ -46,8 +46,11 @@ en:
   login_failed: Login failed
   login_successful: Login successful
   logout_successful: Logout successful
-  log_in: Log in
+  login: Log in
   please_log_in: Please Log in
+  logout: Log out
+  toggle_navigation: Toggle navigation
+  submit: Submit
 
   time:
     formats:

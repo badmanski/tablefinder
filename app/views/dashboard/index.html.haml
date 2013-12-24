@@ -8,3 +8,6 @@
 #post-form.hidden
   = render 'post_form'
 = button_tag t(:create_post), class: 'btn btn-success', id: 'new-post'
+
+:javascript
+  $('#nav-dashboard').addClass('active');

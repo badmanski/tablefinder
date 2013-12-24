@@ -41,3 +41,14 @@ RSpec.configure do |config|
   config.order = "random"
   config.include Capybara::DSL
 end
+
+def log_in user
+  visit login_path
+  fill_in 'E-mail', with: user.email
+  fill_in 'Password', with: @user.password
+  click_button 'Log in'
+end
+
+def log_out
+  delete logout_path
+end

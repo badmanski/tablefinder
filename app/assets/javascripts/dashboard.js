@@ -4,7 +4,7 @@ $(function() {
     $(this).addClass('hidden');
   });
 
-  $('#create-post').click(function() {
+  $('#submit-post').click(function() {
     $.post('dashboard/create_post', {
       title: $('#title').val(),
       content: $('#content').val(),

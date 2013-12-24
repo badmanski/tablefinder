@@ -23,4 +23,13 @@ users = [
   'Ellyn Emanuel'
 ]
 
+User.find_or_create_by_email!({
+  name: 'admin',
+  email: 'admin',
+  phone: '3432423432',
+  password: 'pa',
+  password_confirmation: 'pa',
+  role: User::ROLE_ADMIN
+})
+
 create_users users
